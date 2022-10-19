@@ -104,25 +104,31 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             TextButton(
                 onPressed: () {
-                  DatePicker.showDatePicker(context,
-                      showTitleActions: true,
-                      minTime: DateTime(2018, 3, 5),
-                      maxTime: DateTime(2019, 6, 7),
-                      theme: DatePickerTheme(
-                          headerColor: Colors.orange,
-                          backgroundColor: Colors.blue,
-                          itemStyle: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18),
-                          doneStyle:
-                              TextStyle(color: Colors.white, fontSize: 16)),
-                      onChanged: (date) {
-                    print('change $date in time zone ' +
-                        date.timeZoneOffset.inHours.toString());
-                  }, onConfirm: (date) {
-                    print('confirm $date');
-                  }, currentTime: DateTime.now(), locale: LocaleType.en);
+                  DatePicker.showDatePicker(
+                    context,
+                    showTitleActions: true,
+                    minTime: DateTime(2018, 3, 5),
+                    maxTime: DateTime(2019, 6, 7),
+                    theme: DatePickerTheme(
+                        headerColor: Colors.orange,
+                        backgroundColor: Colors.blue,
+                        itemStyle: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18),
+                        doneStyle:
+                            TextStyle(color: Colors.white, fontSize: 16)),
+                    onChanged: (date) {
+                      print('change $date in time zone ' +
+                          date.timeZoneOffset.inHours.toString());
+                    },
+                    onConfirm: (date) {
+                      print('confirm $date');
+                    },
+                    currentTime: DateTime.now(),
+                    locale: LocaleType.en,
+                    title: "date picker",
+                  );
                 },
                 child: Text(
                   'show date picker(custom theme &date time range)',
@@ -130,13 +136,19 @@ class HomePage extends StatelessWidget {
                 )),
             TextButton(
                 onPressed: () {
-                  DatePicker.showTimePicker(context, showTitleActions: true,
-                      onChanged: (date) {
-                    print('change $date in time zone ' +
-                        date.timeZoneOffset.inHours.toString());
-                  }, onConfirm: (date) {
-                    print('confirm $date');
-                  }, currentTime: DateTime.now());
+                  DatePicker.showTimePicker(
+                    context,
+                    showTitleActions: true,
+                    onChanged: (date) {
+                      print('change $date in time zone ' +
+                          date.timeZoneOffset.inHours.toString());
+                    },
+                    onConfirm: (date) {
+                      print('confirm $date');
+                    },
+                    currentTime: DateTime.now(),
+                    title: "date picker",
+                  );
                 },
                 child: Text(
                   'show time picker',
@@ -144,13 +156,19 @@ class HomePage extends StatelessWidget {
                 )),
             TextButton(
                 onPressed: () {
-                  DatePicker.showTime12hPicker(context, showTitleActions: true,
-                      onChanged: (date) {
-                    print('change $date in time zone ' +
-                        date.timeZoneOffset.inHours.toString());
-                  }, onConfirm: (date) {
-                    print('confirm $date');
-                  }, currentTime: DateTime.now());
+                  DatePicker.showTime12hPicker(
+                    context,
+                    showTitleActions: true,
+                    onChanged: (date) {
+                      print('change $date in time zone ' +
+                          date.timeZoneOffset.inHours.toString());
+                    },
+                    onConfirm: (date) {
+                      print('confirm $date');
+                    },
+                    currentTime: DateTime.now(),
+                    title: "date picker",
+                  );
                 },
                 child: Text(
                   'show 12H time picker with AM/PM',
@@ -158,15 +176,21 @@ class HomePage extends StatelessWidget {
                 )),
             TextButton(
                 onPressed: () {
-                  DatePicker.showDateTimePicker(context,
-                      showTitleActions: true,
-                      minTime: DateTime(2020, 5, 5, 20, 50),
-                      maxTime: DateTime(2020, 6, 7, 05, 09), onChanged: (date) {
-                    print('change $date in time zone ' +
-                        date.timeZoneOffset.inHours.toString());
-                  }, onConfirm: (date) {
-                    print('confirm $date');
-                  }, locale: LocaleType.zh);
+                  DatePicker.showDateTimePicker(
+                    context,
+                    showTitleActions: true,
+                    minTime: DateTime(2020, 5, 5, 20, 50),
+                    maxTime: DateTime(2020, 6, 7, 05, 09),
+                    onChanged: (date) {
+                      print('change $date in time zone ' +
+                          date.timeZoneOffset.inHours.toString());
+                    },
+                    onConfirm: (date) {
+                      print('confirm $date');
+                    },
+                    locale: LocaleType.zh,
+                    title: "date picker",
+                  );
                 },
                 child: Text(
                   'show date time picker (Chinese)',
@@ -174,13 +198,19 @@ class HomePage extends StatelessWidget {
                 )),
             TextButton(
                 onPressed: () {
-                  DatePicker.showDateTimePicker(context, showTitleActions: true,
-                      onChanged: (date) {
-                    print('change $date in time zone ' +
-                        date.timeZoneOffset.inHours.toString());
-                  }, onConfirm: (date) {
-                    print('confirm $date');
-                  }, currentTime: DateTime(2008, 12, 31, 23, 12, 34));
+                  DatePicker.showDateTimePicker(
+                    context,
+                    showTitleActions: true,
+                    onChanged: (date) {
+                      print('change $date in time zone ' +
+                          date.timeZoneOffset.inHours.toString());
+                    },
+                    onConfirm: (date) {
+                      print('confirm $date');
+                    },
+                    currentTime: DateTime(2008, 12, 31, 23, 12, 34),
+                    title: "date picker",
+                  );
                 },
                 child: Text(
                   'show date time picker (English-America)',
@@ -188,15 +218,20 @@ class HomePage extends StatelessWidget {
                 )),
             TextButton(
                 onPressed: () {
-                  DatePicker.showDateTimePicker(context, showTitleActions: true,
-                      onChanged: (date) {
-                    print('change $date in time zone ' +
-                        date.timeZoneOffset.inHours.toString());
-                  }, onConfirm: (date) {
-                    print('confirm $date');
-                  },
-                      currentTime: DateTime(2008, 12, 31, 23, 12, 34),
-                      locale: LocaleType.nl);
+                  DatePicker.showDateTimePicker(
+                    context,
+                    showTitleActions: true,
+                    onChanged: (date) {
+                      print('change $date in time zone ' +
+                          date.timeZoneOffset.inHours.toString());
+                    },
+                    onConfirm: (date) {
+                      print('confirm $date');
+                    },
+                    currentTime: DateTime(2008, 12, 31, 23, 12, 34),
+                    locale: LocaleType.nl,
+                    title: "date picker",
+                  );
                 },
                 child: Text(
                   'show date time picker (Dutch)',
@@ -204,15 +239,20 @@ class HomePage extends StatelessWidget {
                 )),
             TextButton(
                 onPressed: () {
-                  DatePicker.showDateTimePicker(context, showTitleActions: true,
-                      onChanged: (date) {
-                    print('change $date in time zone ' +
-                        date.timeZoneOffset.inHours.toString());
-                  }, onConfirm: (date) {
-                    print('confirm $date');
-                  },
-                      currentTime: DateTime(2008, 12, 31, 23, 12, 34),
-                      locale: LocaleType.ru);
+                  DatePicker.showDateTimePicker(
+                    context,
+                    showTitleActions: true,
+                    onChanged: (date) {
+                      print('change $date in time zone ' +
+                          date.timeZoneOffset.inHours.toString());
+                    },
+                    onConfirm: (date) {
+                      print('confirm $date');
+                    },
+                    currentTime: DateTime(2008, 12, 31, 23, 12, 34),
+                    locale: LocaleType.ru,
+                    title: "date picker",
+                  );
                 },
                 child: Text(
                   'show date time picker (Russian)',
@@ -220,36 +260,110 @@ class HomePage extends StatelessWidget {
                 )),
             TextButton(
                 onPressed: () {
-                  DatePicker.showDateTimePicker(context, showTitleActions: true,
-                      onChanged: (date) {
-                    print('change $date in time zone ' +
-                        date.timeZoneOffset.inHours.toString());
-                  }, onConfirm: (date) {
-                    print('confirm $date');
-                  },
-                      currentTime: DateTime.utc(2019, 12, 31, 23, 12, 34),
-                      locale: LocaleType.de);
+                  DatePicker.showDateTimePicker(
+                    context,
+                    showTitleActions: true,
+                    onChanged: (date) {
+                      print('change $date in time zone ' +
+                          date.timeZoneOffset.inHours.toString());
+                    },
+                    onConfirm: (date) {
+                      print('confirm $date');
+                    },
+                    currentTime: DateTime.utc(2019, 12, 31, 23, 12, 34),
+                    locale: LocaleType.de,
+                    title: "date picker",
+                  );
                 },
                 child: Text(
                   'show date time picker in UTC (German)',
                   style: TextStyle(color: Colors.blue),
                 )),
             TextButton(
-                onPressed: () {
-                  DatePicker.showPicker(context, showTitleActions: true,
-                      onChanged: (date) {
+              onPressed: () {
+                DatePicker.showPicker(
+                  context,
+                  showTitleActions: true,
+                  onChanged: (date) {
                     print('change $date in time zone ' +
                         date.timeZoneOffset.inHours.toString());
-                  }, onConfirm: (date) {
+                  },
+                  onConfirm: (date) {
                     print('confirm $date');
                   },
-                      pickerModel: CustomPicker(currentTime: DateTime.now()),
-                      locale: LocaleType.en);
-                },
-                child: Text(
-                  'show custom time picker,\nyou can custom picker model like this',
-                  style: TextStyle(color: Colors.blue),
-                )),
+                  pickerModel: CustomPicker(currentTime: DateTime.now()),
+                  locale: LocaleType.en,
+                  title: "date picker",
+                );
+              },
+              child: Text(
+                'show custom time picker,\nyou can custom picker model like this',
+                style: TextStyle(color: Colors.blue),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                DatePicker.showDateHalfHourPicker(
+                  context,
+                  showTitleActions: true,
+                  onChanged: (date) {
+                    print('change $date in time zone ' +
+                        date.timeZoneOffset.inHours.toString());
+                  },
+                  onConfirm: (date) {
+                    print('confirm $date');
+                  },
+                  locale: LocaleType.zh,
+                  title: "date picker",
+                );
+              },
+              child: Text(
+                'showDateHalfHourPicker',
+                style: TextStyle(color: Colors.blue),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                DatePicker.showDateHourPicker(
+                  context,
+                  showTitleActions: true,
+                  onChanged: (date) {
+                    print('change $date in time zone ' +
+                        date.timeZoneOffset.inHours.toString());
+                  },
+                  onConfirm: (date) {
+                    print('confirm $date');
+                  },
+                  locale: LocaleType.zh,
+                  title: "date picker",
+                );
+              },
+              child: Text(
+                'showDateHourPicker',
+                style: TextStyle(color: Colors.blue),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                DatePicker.showDateAmPmPicker(
+                  context,
+                  showTitleActions: true,
+                  onChanged: (date) {
+                    print('change $date in time zone ' +
+                        date.timeZoneOffset.inHours.toString());
+                  },
+                  onConfirm: (date) {
+                    print('confirm $date');
+                  },
+                  locale: LocaleType.zh,
+                  title: "date picker",
+                );
+              },
+              child: Text(
+                'showDateAmPmPicker',
+                style: TextStyle(color: Colors.blue),
+              ),
+            ),
           ],
         ),
       ),
